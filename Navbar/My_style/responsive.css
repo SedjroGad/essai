@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../My_image/landscape.jpg');
+    background-size: cover;
+}
+.Navbar{
+    position: absolute;
+    padding: 7% 3% 7% 7%;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+.Navbar a{
+    color: white;
+}
+.Navbar .logo{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.Navbar .nav-links ul{
+    display: flex;
+
+}
+.Navbar .nav-links ul li{
+    margin: 0 25px;
+}
+.Navbar .nav-links ul li .active{
+     color: #ed3c57;
+     font-weight: 600;
+}
+.Navbar .menu-hamburger{
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    width: 30px;
+}
+@media  screen and (max-width: 900px) {
+    .nav-links{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.205);
+        backdrop-filter: blur(9px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links ul li {
+        padding: 30px ;
+    }
+    .Navbar .menu-hamburger{
+        display: block;
+    }
+    .Navbar .logo{
+        position: absolute;
+        top: 45px;
+    }
+    @media  screen and (max-height: 377px) {
+        .nav-links ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+    }
+}
